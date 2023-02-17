@@ -3,12 +3,12 @@ import Navbar from "components/navigation/Navbar"
 import Footer from "components/navigation/Footer"
 
 
-function Home() {
+function Projects() {
     return (
         <Layout>
             <Navbar/>
             <div>
-                Home
+                Projects
             </div>
                 <Footer/>
         </Layout>
@@ -16,4 +16,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Projects
