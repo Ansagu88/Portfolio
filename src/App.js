@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import store from "./store";
 import { Provider } from "react-redux";
+import {Helmet, HelmetProvider} from "react-helmet-async"
 
 import Error404 from "containers/errors/Error404";
 import Home from "containers/pages/Home";
@@ -11,30 +12,41 @@ import NewsLetters from "containers/pages/NewsLetters";
 import Contact from "containers/pages/Contact";
 
 
+
 function App() {
   return (
-    <Provider store={store}>
+    <HelmetProvider>
+      <Helmet>
+        <title>Fulanito de tal</title>
+        <meta name=" " content=" "/>
+        <link rel="canonical" href="" />
+      </Helmet>
       
-      <Router>
-        <Routes>
-          {/* {Error Display} */}
-          <Route path="*" element={<Error404 />} />
+      
+      
+      <Provider store={store}>
+        
+        <Router>
+          <Routes>
+            {/* {Error Display} */}
+            <Route path="*" element={<Error404 />} />
 
-          {/* {Home} */}
-          <Route path="/" element={<Home />} />
-          <Route path="/AboutMe" element={<AboutMe />} />
-          <Route path="/Projects" element={<Projects />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/NewsLetters" element={<NewsLetters />} />
-          <Route path="/Contact" element={<Contact />} />
+            {/* {Home} */}
+            <Route path="/" element={<Home />} />
+            <Route path="/AboutMe" element={<AboutMe />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Blog" element={<Blog />} />
+            <Route path="/NewsLetters" element={<NewsLetters />} />
+            <Route path="/Contact" element={<Contact />} />
 
 
 
 
-        </Routes>
-      </Router>
-    
-    </Provider>    
+          </Routes>
+        </Router>
+      
+      </Provider>
+    </HelmetProvider>    
   );
 }
 
