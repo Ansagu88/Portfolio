@@ -18,8 +18,18 @@ function App() {
     <HelmetProvider>
       <Helmet>
         <title>Fulanito de tal</title>
-        <meta name=" " content=" "/>
+        <meta name="description" content=" "/>
+        <meta name="Keywords" content=""/>
+        <meta name="robots" content="all"/>
         <link rel="canonical" href="" />
+        <meta name="author" content=""/>
+        <meta name="publisher" content=""/>
+
+        {/* Social media tags */}
+        
+
+
+
       </Helmet>
       
       

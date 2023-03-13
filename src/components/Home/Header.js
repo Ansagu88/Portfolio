@@ -5,7 +5,7 @@ function Header() {
     
     return (
     <section class="section about-section" id="about">
-      <div class="container">
+      <div class="container" id="container-about">
         <div class="row align-items-center justify-content-around flex-row-reverse">
           <div class="col-lg-6">
             <div class="about-text">
