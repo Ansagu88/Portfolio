@@ -1,5 +1,14 @@
 import OscarSanchez from "../../assets/img/OscarSanchez.png";
 import { Typewriter } from 'react-simple-typewriter'
+import aws from "../../assets/img/aws-logo.png";
+import Django from "../../assets/img/Django.png";
+import Python from "../../assets/img/Python.png";
+import Docker from "../../assets/img/Docker.png";
+import Git from "../../assets/img/Git.png";
+import GitHub from "../../assets/img/Github.png";
+import Post from "../../assets/img/Post.png";
+import html from "../../assets/img/HtmlCss.png";
+import Agile from "../../assets/img/Agile.png";
 
 function Header() {
     
@@ -42,9 +51,9 @@ function Header() {
                 height="260"
 
               ></img>
-              <h4 class="theme-color" style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}> 
+              <h4 class="theme-color" style={{ paddingTop: '2rem', margin: 'auto 0', fontWeight: 'normal' }} id='Typewriter'> 
                 Life is simple{' '}
-                <div style={{ color: '#198754', fontWeight: 'bold' }}>
+                <div style={{ color: '#236e89', fontWeight: 'bold' }}>
                 <Typewriter
                   words={[' BackEnd Developer', ' Python', ' Django', ' Code', ' Enjoy','Repeat!']}
                   loop={0}
@@ -59,6 +68,20 @@ function Header() {
                 </div>  
               </h4>
             </div>
+          </div>
+          <div class="container row pb-2 pt-5">
+              <a>
+              <img class="p-3" src={Python} alt="Python_Logo" width="100" height="100" />
+              <img class="p-3" src={Django} alt="Django_Logo" width="100" height="100" />
+              <img class="p-3 pe-0" src={Post} alt="Post_Logo" width="135" height="100" />
+              <img class="p-3 ps-0" src={aws} alt="Aws_Logo" width="120" height="100" />
+              <img class="p-3" src={Docker} alt="Docker_Logo" width="100" height="100" />
+              <img class="p-3 pe-0" src={Git} alt="Git_Logo" width="100" height="95" />
+              <img class="p-0" src={GitHub} alt="GitHub_Logo" width="120" height="90" />
+              <img class="p-0" src={html} alt="html_Logo" width="130" height="80" />
+              <img class="p-0" src={Agile} alt="Agile_Logo" width="150" height="85" />
+              </a>
+              
           </div>
         </div>
       </div>

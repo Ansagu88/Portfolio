@@ -7,7 +7,7 @@ function Navbar() {
             <nav class="navbar navbar-expand-lg bg-body-tertiary pt-0 mt-0 pb-0" id="navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand ms-4 mt-4" href="#">
-                    <img src={Logo} alt="Company-Logo" width="200" height="300"></img>
+                    <img src={Logo} alt="Company-Logo" width="300" height="300"></img>
                     </a>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">

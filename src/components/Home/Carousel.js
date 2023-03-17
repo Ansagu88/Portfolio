@@ -1,6 +1,6 @@
 import Stock from "../../assets/img/Stock.png";
-import IA from "../../assets/img/IA.png";
-import Eco from "../../assets/img/Eco.png";
+import Colors from "../../assets/img/Colors.png";
+import Eco from "../../assets/img/Econmerce.png";
 
 function Carousel() {
     return (
@@ -13,24 +13,48 @@ function Carousel() {
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src={Stock} class="d-block w-100" height="600" alt="Stock's Image Project"></img>
+                    <img src={Stock} class="d-block w-100" height="950" alt="Stock's Image Project"></img>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                    <div class="card w-50">
+                        <div class="card-header">
+                                Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src={IA} class="d-block w-100" height="600" alt="IA's Image Project"></img>
+                    <img src={Colors} class="d-block w-100" height="950" alt="IA's Image Project"></img>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <div class="card-colors">
+                            <div class="card-header">
+                                Featured
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src={Eco} class="d-block w-100" height="600" alt="Eco's Image Project"></img>
+                    <img src={Eco} class="d-block w-100" height="950" alt="Eco's Image Project"></img>
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                    <div class="card w-50">
+                        <div class="card-header">
+                                Featured
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
                     </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ function Contact() {
     return (
 
         <section class="contact-area">
-            <div class="container">
+            <div class="container" id="container-contact">
                 <div class="row">
                     <div class="col-xl-7 col-lg-8">
                         <div class="section-title mt-45">
@@ -19,7 +19,7 @@ function Contact() {
                                             <label>Full Name</label>
                                             <div class="input-items default">
                                                 <i class="lni lni-user"></i>
-                                                <input type="text" placeholder="John Doe" />
+                                                <input type="text" placeholder="Your Name" />
                                             </div>
                                         </div>
                                         {/* <!-- form input --> */}

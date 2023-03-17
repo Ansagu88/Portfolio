@@ -3,7 +3,7 @@ function Blog() {
         // <!--====== BLOG PART START ======-->
         <section class="blog-area pb-5">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center shadow-lg bg-body-dark rounded">
                 <div class="col-lg-4 col-md-8 col-sm-10" id="Post-1">
                     <div class="single-blog blog-style-one">
                     <div class="blog-image">
