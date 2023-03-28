@@ -47,7 +47,8 @@ DJANGO_APPS = [
 
 # Local apps
 PROJECTS_APPS = [
-
+    'apps.blog',
+    'apps.category',
 
 ]
 
