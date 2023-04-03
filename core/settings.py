@@ -47,7 +47,8 @@ DJANGO_APPS = [
 
 # Local apps
 PROJECTS_APPS = [
-
+    'apps.blog',
+    'apps.category',
 
 ]
 
@@ -65,14 +66,18 @@ INSTALLED_APPS = DJANGO_APPS + PROJECTS_APPS + THIRD_PARTY_APPS
 
 #CKEDITOR
 CKEDITOR_CONFIGS = {
+    # 'default': {
+    #     'toolbar': 'Custom',
+    #     'toolbar_Custom': [
+    #         ['Bold', 'Italic', 'Underline'],
+    #         ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+    #         ['Link', 'Unlink'],
+    #         ['RemoveFormat', 'Source']
+    #     ],
+    #     'autoParagraph': False
+    # }
     'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['Link', 'Unlink'],
-            ['RemoveFormat', 'Source']
-        ],
+        'toolbar': 'Full',
         'autoParagraph': False
     }
 }
@@ -195,3 +200,5 @@ if not DEBUG:
         'deafualt': env.db('DATABASE_URL'),
         }
     DATABASES['default']['ATOMIC_REQUESTS'] = True
+
+
