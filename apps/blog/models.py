@@ -10,6 +10,15 @@ def blog_thumbnail_upload_location(instance, filename):
 # Create your models here.
 class Post(models.Model):
 
+    class PostObjects(models.Manager):
+        def get_queryset(self):
+            return super().get_queryset().filter(status='published')
+        
+    options = (
+        ('draft', 'Draft'),
+        ('published', 'Published'),
+    )
+
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
     thumbnail = models.ImageField(upload_to=blog_thumbnail_upload_location)
@@ -19,6 +28,10 @@ class Post(models.Model):
     description = models.CharField(max_length=255)
     content = RichTextUploadingField(blank=True, null=True) 
     views = models.IntegerField(default=0, blank=True)
+    status = models.CharField(max_length=10, choices=options, default='draft')
+
+    objects = models.Manager() # The default manager.
+    postobjects = PostObjects() # The custom manager.
 
     class Meta:
         verbose_name = "Post"
