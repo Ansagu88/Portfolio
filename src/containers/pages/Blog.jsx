@@ -25,6 +25,7 @@ function Blog({
             <Navbar/>
             <div>
                 Blog
+                
             </div>
                 <Footer/>
         </Layout>

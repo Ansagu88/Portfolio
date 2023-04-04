@@ -33,9 +33,6 @@ class BlogListView(APIView):
             return Response({'error': 'Post does not exist'}, status=status.HTTP_404_NOT_FOUND)    
 
 
-
-
-
 class ListPostByCategoryView(APIView):
     permission_classes = [permissions.AllowAny]
 
@@ -97,15 +94,19 @@ class PostDetailView(APIView):
             return Response({'error': 'Post does not exist'}, status=status.HTTP_404_NOT_FOUND)
             
             
-
 class SearchBlogView(APIView):
     permission_classes = [permissions.AllowAny]
     def get(self, request, format=None):
 
             search_term = request.query_params.get('search_term')
-            matches = Post.postobjects.filter(Q(title__icontains=search_term) | Q(description__icontains=search_term) | Q(category__name__icontains=search_term))
-              
-            serializer = PostListSerializer(matches, many=True)
+            matches = Post.postobjects.filter(
+                Q(title__icontains=search_term) | 
+                Q(description__icontains=search_term) | 
+                Q(category__name__icontains=search_term))
+
+            paginator = LargeSetPagination()
+            results = paginator.paginate_queryset(matches, request)  
+            serializer = PostListSerializer(results, many=True)
 
             return Response({'filtered_posts': serializer.data}, status=status.HTTP_200_OK)
 

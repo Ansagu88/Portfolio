@@ -3,5 +3,5 @@ import categories from './categories';
 
 
 export default combineReducers({
-    categories
+    categories,
 });
